@@ -16,7 +16,7 @@ function App() {
             />
             <GetStartedPanel description={
                 `
-                Upload a list of invoices, debit and credit notes
+                Upload list of invoices, debit and credit notes
                 in different currencies.
                 `
             }/>
