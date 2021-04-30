@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+#upload-section {
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
