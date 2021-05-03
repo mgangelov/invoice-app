@@ -6,7 +6,11 @@ export class CreditInvoice extends Invoice {
         this.parentDocumentId = parentDocumentId;
     }
 
+    addChildInvoice(invoice) {
+        return undefined;
+    }
+
     calculateInvoiceValueInCurrency(currencyName, exchangeRate) {
-        return -1 * this.getValueInCurrency(currencyName, exchangeRate);
+        return -1 * this.getTotalInCurrency(currencyName, exchangeRate);
     }
 }

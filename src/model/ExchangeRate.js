@@ -1,11 +1,12 @@
 export class ExchangeRate {
-    constructor({ currenciesList=[], defaultCurrency }) {
+    constructor({ currenciesList=[] }) {
         this.currencies = {};
-        this.defaultCurrency = defaultCurrency;
         if (currenciesList.length > 0) {
             currenciesList.forEach(({ name, exchangeRate }) => {
                 this.currencies[name] = exchangeRate;
             });
+            this.defaultCurrency = currenciesList
+                .filter(currency => currency.defaultCurrency)[0];
         }
     }
 }

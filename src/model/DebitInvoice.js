@@ -6,6 +6,10 @@ export class DebitInvoice extends Invoice {
         this.parentDocumentId = parentDocumentId;
     }
 
+    addChildInvoice(invoice) {
+        return undefined;
+    }
+
     calculateInvoiceValueInCurrency(currencyName, exchangeRate) {
-       return this.getValueInCurrency(currencyName, exchangeRate); 
+       return this.getTotalInCurrency(currencyName, exchangeRate); 
     }}

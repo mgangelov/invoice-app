@@ -5,11 +5,11 @@ export class Customer {
         this.documents = documents;
     }
 
-    addDocuments(document) {
+    addDocument(document) {
         if (document.id && document.total) {
             this.documents.push(document);
         } else {
-            console.error(`Cannot add document ${document}`);
+            throw new Error(`Cannot add document with ID ${document.id}`);
         }
     }
 }
